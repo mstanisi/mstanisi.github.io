@@ -1,0 +1,175 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  color: black;
+  text-align: justify;
+  overflow-y: hidden;
+}
+#sidebar {
+  width: 30%;
+  height: 100vh;
+  /* background-color: grey; */
+  padding: 1.5em;
+}
+#portfolio {
+  /* background-color: blue; */
+  width: 70%;
+  padding: 1.5em;
+  height: 100vh;
+  overflow-y: scroll;
+}
+#about{
+  width: 70%;
+  height: 100vh;
+  padding: 1.5em;
+  display: none;
+
+  overflow-y: scroll;
+
+}
+#name {
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid black;
+  line-height: 1.5;
+}
+#bio {
+  margin-bottom: 1.5em;
+}
+
+div.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid black;
+  line-height: 1.5;
+
+}
+
+div.projects {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+div.summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+div.text {
+  width: 100%;
+  margin-left: 1.5em;
+}
+div.images {
+ width: 150%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+video {
+  width: 100%;
+  margin-bottom: 1em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+summary{
+  cursor: pointer;
+}
+
+/* resume code */
+#resume{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 8vh;
+
+}
+.job{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+.years{
+  /* margin-right: 15%; */
+  width: 15%;
+
+}
+.jobTitle{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+
+}
+.resumeCategory{
+  margin-bottom: .75em;
+}
+.catWithBar{
+
+
+  border-top: 2px solid black
+}
+
+/* IMAGE RULES */
+.images img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.about_images img {
+  width: 25%;
+  margin-bottom: 1em;
+}
+
+
+/* Add some animation to the expandable content */
+details[open] summary {
+  margin-bottom: 1em;
+}
+
+details {
+  transition: all 0.3s ease;
+}
+
+/* Consider adding this to maintain aspect ratios */
+.images img {
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  #sidebar, #portfolio, #about {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.summary {
+    flex-direction: column;
+  }
+  
+  div.images {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}

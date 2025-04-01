@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Marko Stanišić's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/images.nosync/mooncake.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="name">
+      <a href="#" id="nameButton"> ☕️ Marko Stanišić</a>
+      </div>
+      <div id="bio">
+        is a data scientist and writer based in Brooklyn, NY.
+        <br><br/>
+        Each project title has imbedded link to the code and/or pdf.
+        <br /><br /><a href="MS_resume.pdf" target="_blank" download>CV download</a>
+      </div>
+      <div id="pages">
+        <a href="#" id="aboutButton">About</a>
+        <br /><br />
+        <a href="https://github.com/mstanisi" target="_blank">Github</a> | 
+        <a href="https://www.linkedin.com/in/marko-stani%C5%A1i%C4%87-82476b221/" target="_blank">LinkedIn |
+        <a href="https://markosblog.substack.com/" target="_blank">Substack</a>
+        </div>
+    </div>
+    <div id="portfolio">
+      <div id="project1" class="projects">
+        <div class="topbar">
+          <div class="projectname">
+            <a href="https://github.com/mstanisi/aquasteady_research" 
+            target="_blank"> 
+            📊 Machine Learning for Agriculture 
+            </a>
+            (March 2025)</a>
+        </div>
+        <div class="designtype"> Scikit-learn, Matplotlib, Pandas </div>
+      </div>
+      <div class="summary">
+        <div class="images">
+          <img src="assets/aquasteady.jpg" alt>
+          <img src="assets/randomforest.png" alt class="expand">
+          <img src="assets/ridge_regression.png" alt class="expand">
+          <img src="assets/cluster.png" alt class="expand">
+          <img src="assets/yield_regression.png" alt class="expand">
+          <img src="assets/finance_regression.png" alt class="expand">
+        </div>
+        <div class="text">
+          <details>
+            <summary>
+              Working with the NSF-funded project <em>Aquasteady</em>, I built models with USDA data to predict trends in irrigation and sustainability.
+            </summary>
+            <br>
+            Aquasteady is an NSF-funded project developing a seaweed-based hydrogel that helps farms maintain soil moisture and withstand irregular weather patterns caused by climate change. 
+            As part of my assistantship with them I analyzed 20 years of federal census polling American farmers on how they may be struggling to meet their sustainability goals. 
+            <br><br>
+            I found that the data was multi-correlated, meaning that farms nation-wide were failing to meet irrigation standards on all fronts. 
+            While this was enough to confirm a need for the solution Aquasteady was providing, I wanted to delve into what was driving this overall trend as well as what watersheds were struggling the most. 
+            <br><br>
+            While cleaning the data I found that filtering by the amount of acres irrigated as the metric provided the least noisy <em>correlation matrix</em>. 
+            Regardless, implementing machine learning methods for feature selection would be essential. 
+            <br><br>
+            First I implemented a <em>Random Forest Classifier</em> to rank the significance of each region and prune the ones with abnormally low scores. 
+            After this, I implemented a <em>Ridge Regression</em> in order to pare my data down to the most significant features. 
+            <br><br>
+            After pruning the features of all low-ranking score, I interpolated the data to do a <em>k-means cluster analysis</em> on the geographic regions. 
+            States and their respective watersheds correlated together and revealed outlier regions, such as California and the Texas Gulf. I took note of these for future spatial analysis. 
+            <br><br>
+            A final <em>linear regression</em> revealed that the risk of reduced crop yield and a lack of finances were the fastest growing barriers to sustainability for US farms.
+          </details>
+      </div>
+    </div>
+
+
+    <div id="project2" class="projects">
+      <div class="topbar">
+        <div class="projectname">
+          <a href="https://github.com/mstanisi/architecture-reading-room" target="_blank" download>🌐 Library Management System for the Bill Menking Collection</a> (March 2025)</a>      </div>
+        <div class="designtype">
+          metadata, database design, SQL
+        </div>
+      </div>
+  
+      <div class="summary">
+        <div class="images">
+          <img src="assets/reading_room.jpg" alt>
+          <img src="assets/ERD.png" alt class="expand">
+          <img src="assets/webpage.png" alt class="expand">
+        </div>
+        <div class="text">
+          <details>
+            <summary>
+              While working at the <em>Pratt School of Architecture</em>, I helped catalog a collection of over 2000 books and ephemera for the newly opened Reading Room. 
+              I then designed a <em>relational database</em> to allow students to browse titles and loan them out. 
+              With <em>PostgreSQL</em> and <em>JavaScript</em> I coded an interface for an operational library management system. 
+              </summary>
+              <br>
+              The Pratt School of Architecture houses the book collection of the late professor William "Bill" Menking. 
+              Along with countless titles related to design and critical theory, included in the collection are a host of magazines, blueprints and exhibition catalogs. 
+              <br><br>
+              During the summer, I had the job of writing <em>metadata</em> for every title and then organizing them in the stacks by Dewey Decimal. 
+              During the school year, I designed an <em>ERD</em> to store the data and facilitate a library system where members of the Pratt community could browse the collection online and loan titles out. 
+              <br><br>
+              The <em>SQL</em> architecture I wrote allows administrators to register members with valid Pratt IDs, manage fees, and update the catalog at will. 
+              On the user-end, members can browse by subject tags and place holds on titles that catch their eye. 
+              <br><br>
+              For the interface, I used a <em>Postgres</em> relational database to ensure scalability when incorporated into <em>JavaScript</em>. 
+              The end-product focuses on data integrity, easy querying and seamless transactions. I kept the design rudimentary. 
+          </details>
+            </div>
+      </div>
+    </div>
+    
+
+      <div id="project3" class="projects">
+      <div class="topbar">
+        <div class="projectname">
+          <a href="https://github.com/mstanisi/novabot" target="_blank">
+            ☸️ Novabot </a> (December 2024)</a>
+        </div>
+        <div class="designtype">
+          PyTorch, GPT2, NumPy
+        </div>
+      </div>
+
+      <div class="summary">
+        <div class="images">
+          <img src="assets/nova.jpg" alt>
+          <img src="assets/prompt.jpg" alt class="expand">
+        </div>
+        <div class="text">
+          <details>
+            <summary>
+              <em>Novabot</em> is a fine-tuned LLM model that emulates the "cut-up" technique pioneered by writer William S. Burroughs, wherein a list of words and phrases are clipped and rearranged into new, original passages. 
+              </summary>
+              <br>
+               This project is premised on a lost manuscript known as the "Word Hoard" by experimental writer William S. Burroughs. 
+               The manuscript consisted of around 1000 typewriter pages written between 1954 and 1958. 
+               Burroughs physically cut up the manuscript and rearranged the words and phrases to develop a series of five novels, beginning with Naked Lunch and ending with Nova Express. 
+               <br><br>
+               Using <em>NumPy</em> I ingested each novel as a text file and extracted the intersection between them all as set objects, creating a massive list of words that would serve as my word hoard. 
+               After cleaning the list of characters and digits, I imported the <em>GPT2</em> transformer and tokenizer from <em>HuggingFace</em>. 
+               <br><br>
+               Using <em>PyTorch</em> I then fine-tuned the model on Naked Lunch so that the output would resemble the style of Burroughs while forcing the vocabulary of the word hoard with <em>prompt engineering</em>. 
+               Once prompted, the model outputs passages using the same algorithmic process that inspired Burroughs' original writings. 
+               <br><br>
+               Due to the lack of GPU power, I wasn't able to test out more powerful or versatile models like GPT-4 or Llama 3. 
+               Further prompt engineering and constrained decoding will also be necessary before a web app can be developed. 
+               <br><br>
+               This project remains public on <em>GitHub</em> for others to pull and test out to their liking.               
+          </details>
+            </div>
+      </div>
+    </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    <div id="project4" class="projects">
+      <div class="topbar">
+        <div class="projectname">
+          <a href="dreams.pdf" target="_blank" download>✏️ Dreams, Overfitting and AI</a> (July 2024)</a>      </div>
+        <div class="designtype">
+          essay, conference presentation, tech criticism
+        </div>
+      </div>
+  
+      <div class="summary">
+        <div class="images">
+          <img src="assets/slide3.png" alt>
+          <img src="assets/interfaceing.png" alt class="expand">
+  
+  
+        </div>
+        <div class="text">
+          <details>
+            <summary>
+              This paper discusses connections between neuroscience research and the mechanics of generative AI. 
+              It was presented at the Taipei-based technology conference <em>INTERFACEing</em>.
+            </summary>
+            <br>
+            Presenting to an audience of literature faculty, I drew parallels between trends in machine learning and works by W.B. Sebald and William Blake. 
+            After the presentation I led a Q&A about the theoretical limits of AGI and a need for a return to the study of cybernetics.
+          </details>
+            </div>
+      </div>
+    </div>
+
+    <div id="project5" class="projects">
+      <div class="topbar">
+        <div class="projectname">
+          <a href="https://github.com/mstanisi/chatbots-research" target="_blank" download>🔎 Trust, Apprehension and Chatbots</a> (November 2023)</a>      </div>
+        <div class="designtype">
+          quantitative research, R, Tableau
+        </div>
+      </div>
+  
+      <div class="summary">
+        <div class="images">
+          <img src="assets/dashboard.jpg" alt>
+          <img src="assets/slide1.png" alt class="expand">
+          <img src="assets/slide2.png" alt class="expand">
+  
+        </div>
+        <div class="text">
+          <details>
+            <summary>
+              <em>Trust, Apprehension and Chatbots</em> is a research paper that looks at various use-cases of AI tools in educational and vocational settings, exploring the notion of trust in human-computer interaction and the lack thereof. 
+              The efficacy of chatbots for university students in particular is analyzed with <em>R</em> and visualized in <em>Tableau</em>.
+            </summary>
+                <br>
+                During my first semester at Pratt Institute, the use of LLM-powered chatbots by students was becoming rampant across the globe. 
+                When it came time to write my final paper, I wanted to explore not only how this trend was affecting student cognition but also how our relationship to AI could be different. 
+                <br><br>
+                Inspired by the cyberneticist philosophies of the mid-century, I guided my <em>bibliographic research</em> towards studies that emphasized a high level of inquiry and user-engagement. 
+                I supported my outlook on the conceptual premises of <em>machine learning</em>, which stresses a transparent use of data distinct from the complex ambiguity of modern AI systems. 
+                <br><br>
+                Because the main feature of machine learning is its capacity to learn, I drew from educational settings first before delving into the vocational. 
+                I found that elementary school students experienced the most freedom and growth using AI tools because they were fostered within a "community of inquiry," as one study described. 
+                University students, on the other hand, lacked this freedom and only used AI as a means to save time on homework. 
+                <br><br>
+                Plotting survey data in a <em>linear regression</em> revealed that low GPAs correlated positively with a high dependency on AI. 
+                The relationship was opposite for elementary school students, as those that excelled tended to find the most satisfaction with the new technologies. 
+                <br><br>
+                This dichotomy of trust and apprehension translated neatly into studies of vocational contexts. 
+                Workers only appreciated the use of AI when they were able to modulate between automatic and manual use of the system at hand. 
+                This fostered a sense of learning along with the technology that improved efficiency on all fronts. 
+                Studies where this trust did not manifest saw the worker in scenarios of high-stress, where the use of AI was implemented in order to replace them in their role. 
+                <br><br>
+                As AI continues to revolutionize the tech industry, this project still advises my perspective on the state of things and motivates me to build my own community of inquiry.  
+                </details>
+            </div>
+      </div>
+    </div>
+
+  </details>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+<div id="about">
+<div class="projects">
+<div class="topbar">
+<div class="email">
+  ✉️ markostanisic98@gmail.com ☎️ (919) 360 - 2503
+</div>
+</div>
+</div>
+I graduated in 2021 from UNC Chapel Hill with a B.A. in Comparative Literature. 
+<br><br>
+I worked some years as an indexer and a copyeditor but now I'm interested in data. 
+<br><br>
+In May 2025 I earn my M.S. in Data Analytics & Visualization from the Pratt School of Information.
+<br><br>
+I'm currently learning GIS in Python and Bayesian statistics with machine learning methods. 
+<br><br>
+I enjoy writing creative nonfiction for small publications and my Substack. 
+<br><br>
+<div class="about_images">
+  <img src="assets/me.jpeg" alt>
+</div>
+</div> <br />
+<div class="catWithBar">
+<div class="resumeCategory">
+
+</div>
+
+
+</div>
+</div>
+
+
+</body>
+
+<script src="script.js">
+
+</script>
+</html>
